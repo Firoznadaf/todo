@@ -10,7 +10,7 @@ import Todo from './components/todo/Todo';
 import { useDispatch } from 'react-redux';
 import { authActions } from './store';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     const id = sessionStorage.getItem("id");

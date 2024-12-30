@@ -27,15 +27,16 @@ const SignIn = () => {
       );
       console.log(response.data);
       if (response.data) {
-        sessionStorage.setItem("id", response.data._id);
+        sessionStorage.setItem("id", response.data.user._id);
+
         dispatch(authActions.login());
         history("/todo");
       } else {
-        // Handle the case where the response does not contain the expected data
+       
         console.error("Response data or _id not found in the response.");
       }
     } catch (error) {
-      // Handle any errors that occurred during the HTTP request
+      
       console.error("An error occurred:", error);
     }
   };

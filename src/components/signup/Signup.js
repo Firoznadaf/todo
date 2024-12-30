@@ -1,9 +1,10 @@
+import axios from "axios";
 import React from "react";
 import "./signup.css";
 import HeadingComp from "./HeadingComp";
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 const Signup = () => {
   const history = useNavigate();
   const [Inputs, setInputs] = useState({
